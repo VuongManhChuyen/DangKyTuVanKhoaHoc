@@ -1,0 +1,127 @@
+<title>{{tt}}</title>
+<div class="text-center">
+  <p><a href="#!/" class="navbar-brand">Trang Chủ</a> >> {{dk}}</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h5>ĐĂNG KÍ KHÓA HỌC</h5>
+      <div>
+        <img src="img/bannerdk.jpg" style="width: 100%" />
+      </div>
+      <form class="mt-3" name="DangKy">
+        <div class="mb-3">
+          <label class="form-label">Họ Tên (*)</label>
+          <input type="text" class="form-control" ng-model="inputValue.hoten" />
+          <p ng-if="kiemTraDuLieu.hoten==true" style="color: red">
+            Vui lòng nhập Họ Tên
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Số Điện Thoại (*)</label>
+          <input
+            ng-model="inputValue.sodienthoai"
+            type="text"
+            class="form-control"
+          />
+
+          <p ng-if="kiemTraDuLieu.sodienthoai1==true" style="color: red">
+            Vui lòng nhập Số Điện Thoại
+          </p>
+          <p ng-if="kiemTraDuLieu.sodienthoai2==true" style="color: red">
+            Vui lòng nhập Số Điện Thoại của Việt Nam
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Địa Chỉ Email (*)</label>
+          <input ng-model="inputValue.email" type="text" class="form-control" />
+          <p ng-if="kiemTraDuLieu.email1==true" style="color: red">
+            Vui lòng nhập địa chỉ Email
+          </p>
+          <p ng-if="kiemTraDuLieu.email2==true" style="color: red">
+            Vui lòng nhập Email đúng định dạng
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Số Chứng Minh Nhân Dân (*)</label>
+          <input ng-model="inputValue.cmnd" type="text" class="form-control" />
+          <p ng-if="kiemTraDuLieu.cmnd1==true" style="color: red">
+            Vui lòng nhập chứng minh nhân dân
+          </p>
+          <p ng-if="kiemTraDuLieu.cmnd2==true" style="color: red">
+            Nhập chứng minh nhân dân phải là số
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Cơ Sở Bạn Muốn Học (*)</label>
+          <select class="form-select" ng-model="inputValue.cs">
+            <option
+              value="VMC Tiger, Nguyên Xá, Minh Khai, Bắc Từ Liêm, Hà Nội"
+            >
+              VMC Tiger, Nguyên Xá, Minh Khai, Bắc Từ Liêm, Hà Nội
+            </option>
+            <option value="Thượng Nông, Na Hang, Tuyên Quang">
+              Thượng Nông, Na Hang, Tuyên Quang
+            </option>
+          </select>
+          <p ng-if="kiemTraDuLieu.cs==true" style="color: red">
+            Vui lòng chọn cơ sở
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Khóa Học</label>
+          <input
+            type="text"
+            disabled
+            class="form-control"
+            placeholder="Lập Trình "
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Trình độ (*)</label>
+          <select class="form-select" ng-model="inputValue.trinhdo">
+            <option value="Học Sinh">Học Sinh</option>
+            <option value="Tốt nghiệp THPT">Tốt nghiệp THPT</option>
+            <option value="Cao đẳng, ĐH">Cao đẳng, ĐH</option>
+            <option value="Khác">Khác</option>
+          </select>
+          <p ng-if="kiemTraDuLieu.trinhdo==true" style="color: red">
+            Vui lòng trình độ
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Để Lại Lời Nhắn</label>
+          <textarea
+            class="form-control"
+            cols="30"
+            rows="10"
+            [
+            ngModel]="inputValue.loinhan"
+          ></textarea>
+        </div>
+        <button ng-click="OnSubmit()" class="btn btn-primary">ĐĂNG KÝ</button>
+      </form>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <h5>BÀI VIẾT LIÊN QUAN</h5>
+      <img src="img/tin1.jpg" style="width: 100%" /><br />
+      <p class="mt-3">
+        Bandwidth là gì? Tất tần tật thông tin mà bạn cần biết về băng thông
+      </p>
+      <hr />
+      <br />
+      <img src="img/tin2.jpg" style="width: 100%" /><br />
+      <p class="mt-3">
+        Các kiểu dữ liệu trong Python gồm những gì? Các thành phần cơ bản trong
+        Python bạn cần biết
+      </p>
+      <hr />
+      <br />
+      <img src="img/tin3.jpg" style="width: 100%" /><br />
+      <p class="mt-3">Coder là gì? Người Coder cần có những tố chất nào?</p>
+      <hr />
+      <br />
+    </div>
+  </div>
+</div>

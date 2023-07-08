@@ -1,0 +1,34 @@
+<title>{{bdk}}</title>
+<h5 class="text-center mt-3">Thông Tin Đặt Khóa Học Của Bạn</h5>
+<div class="table-responsive mt-3">
+  <table
+    class="table table-striped table-hover table-borderless table-primary align-middle"
+  >
+    <thead class="table-light">
+      <tr>
+        <th>#</th>
+        <th>Họ Và Tên</th>
+        <th>Số Điện Thoại</th>
+        <th>Email</th>
+        <th>Số CMND</th>
+        <th>Cơ Sở Muốn Học</th>
+        <th>Trình Độ</th>
+        <th>Lời Nhắn</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr class="table-primary" ng-repeat="t in danhsach">
+        <td scope="row">{{t.id}}</td>
+        <td>{{t.hoten}}</td>
+        <td>{{t.sodt}}</td>
+        <td>{{t.email}}</td>
+        <td>{{t.cmnd}}</td>
+        <td>{{t.cs}}</td>
+        <td>{{t.trinhdo}}</td>
+        <td>{{t.loinhan}}</td>
+        
+      </tr>
+    </tbody>
+    <tfoot></tfoot>
+  </table>
+</div>
